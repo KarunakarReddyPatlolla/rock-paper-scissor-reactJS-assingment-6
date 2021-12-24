@@ -35,7 +35,7 @@ class PlayingView extends Component {
   state = initialState
 
   onClickRockButton = () => {
-    const randomImage = choicesList[Math.floor(Math.random() * 2)].imageUrl
+    const randomImage = choicesList[Math.floor(Math.random() * choicesList.length)].imageUrl
 
     if (randomImage === choicesList[0].imageUrl) {
       this.setState(prevState => ({
@@ -62,7 +62,7 @@ class PlayingView extends Component {
   }
 
   onClickScissorsButton = () => {
-    const randomImage = choicesList[Math.floor(Math.random() * 2)].imageUrl
+    const randomImage = choicesList[Math.floor(Math.random() * choicesList.length)].imageUrl
 
     if (randomImage === choicesList[1].imageUrl) {
       this.setState(prevState => ({
@@ -89,7 +89,7 @@ class PlayingView extends Component {
   }
 
   onClickPaperButton = () => {
-    const randomImage = choicesList[Math.floor(Math.random() * 2)].imageUrl
+    const randomImage = choicesList[Math.floor(Math.random() * choicesList.length)].imageUrl
 
     if (randomImage === choicesList[2].imageUrl) {
       this.setState(prevState => ({
